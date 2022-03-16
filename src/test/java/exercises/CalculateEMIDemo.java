@@ -1,11 +1,10 @@
+
 package  exercises;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 
 public class CalculateEMIDemo{
 
@@ -14,15 +13,35 @@ public class CalculateEMIDemo{
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         //go to the url
-        driver.get("https://emicalculator.net/");
+        driver.get("http://a.testaddressbook.com/");
 
-        Actions actions = new Actions(driver);
+        driver.findElement(By.id("sign-in")).click();
 
-        WebElement loanSliderCirlce = driver.findElement(By.cssSelector("#loanamountslider >span"));
-        WebElement interestSliderCirlce = driver.findElement(By.cssSelector("#loaninterestslider >span"));
-        WebElement tenureSliderCircle = driver.findElement(By.cssSelector("#loantermslider >span"));
+        Thread.sleep(5000);
 
-        actions.dragAndDrop(loanSliderCirlce).build.perform();
+        driver.findElement(By.id("session_email")).sendKeys("abcd@gmail.com");
+        driver.findElement(By.id("session_password")).sendKeys("selenium");
+        driver.findElement(By.name("commit")).click();
+
+
+
+        driver.findElement(By.cssSelector("a[data-test-'addresses']")).click();
+
+
+
+        driver.findElement(By.cssSelector("a[data-test-'create']")).click();
+
+
+        driver.findElement(By.id("address_first_name")).sendKeys("FirstName");
+        driver.findElement(By.id("address_last_name")).sendKeys("LastName");
+        driver.findElement(By.id("address_street_address")).sendKeys("Address1");
+        driver.findElement(By.id("address_city")).sendKeys("City");
+        driver.findElement(By.id("address_zip_code")).sendKeys("12345");
+
+        String colorToSelect = "#0433ff";
+        driver.findElement(By.id("address_color")).sendKeys(colorToSelect);
+        driver.findElement(By.name("commit")).click();
+
     }
 
 }
