@@ -19,18 +19,21 @@ public class CalculateEMIDemo{
 
         Thread.sleep(5000);
 
-        driver.findElement(By.id("session_email")).sendKeys("abcd@gmail.com");
-        driver.findElement(By.id("session_password")).sendKeys("selenium");
+        driver.findElement(By.id("session_email")).sendKeys("abcdefgh@gmail.com");
+        driver.findElement(By.id("session_password")).sendKeys("abcdefgh");
+        Thread.sleep(5000);
         driver.findElement(By.name("commit")).click();
 
+        Thread.sleep(5000);
+
+        driver.findElement(By.cssSelector("a[data-test='addresses']")).click();
 
 
-        driver.findElement(By.cssSelector("a[data-test-'addresses']")).click();
+        Thread.sleep(5000);
 
+        driver.findElement(By.cssSelector("a[data-test='create']")).click();
 
-
-        driver.findElement(By.cssSelector("a[data-test-'create']")).click();
-
+        Thread.sleep(5000);
 
         driver.findElement(By.id("address_first_name")).sendKeys("FirstName");
         driver.findElement(By.id("address_last_name")).sendKeys("LastName");
