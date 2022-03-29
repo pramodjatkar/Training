@@ -49,7 +49,7 @@ public class flipkart {
 
         Thread.sleep(3000);
 
-        driver.findElement(By.xpath("/html/body/div/div/div[3]/div[1]/div[2]/div[3]")).click();
+        driver.findElement(By.xpath("/html/body/div/div/div[3]/div[1]/div[2]/div[2]")).click();
 
 
         ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
