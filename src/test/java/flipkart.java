@@ -49,7 +49,7 @@ public class flipkart {
 
         Thread.sleep(3000);
 
-        driver.findElement(By.xpath("/html/body/div/div/div[3]/div[1]/div[2]/div[2]")).click();
+        driver.findElement(By.xpath("/html/body/div/div/div[3]/div[1]/div[2]/div[6]")).click();
 
 
         ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
@@ -93,7 +93,18 @@ public class flipkart {
         Thread.sleep(3000);
         driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div[1]/div[2]/div/div/div/div/div/label/div[2]/div/form/div/div[1]/button")).click();
 
+        Thread.sleep(10000);
+        driver.findElement(By.xpath("/html/body/div/div/div[1]/div/div/button")).click();
 
+        driver.findElement(By.name("name")).sendKeys("Pramod");
+        driver.findElement(By.name("phone")).sendKeys("7619663345");
+        driver.findElement(By.name("landmark")).sendKeys("near Rto");
+        driver.findElement(By.name("addressLine2")).sendKeys("near temple");
+        driver.findElement(By.name("alternatePhone")).sendKeys("7090904268");
+        driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div[1]/div[2]/div/div/div/div/div/label/div[2]/div/form/div/div[7]/div/div/label[1]/div[2]/span")).click();
+        driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div[1]/div[2]/div/div/div/div/div/label/div[2]/div/form/div/div[8]/button")).click();
+
+        driver. navigate(). back();
     }
 
 
