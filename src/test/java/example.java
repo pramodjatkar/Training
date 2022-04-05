@@ -13,6 +13,7 @@ import java.util.List;
 
 import static org.testng.AssertJUnit.assertTrue;
 
+
 public class example {
     private String testUrl;
     private WebDriver driver;
@@ -21,7 +22,7 @@ public class example {
     public void prepare() {
         //setup chromedriver
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
 
         testUrl = "https://leftstick.github.io/";
 
